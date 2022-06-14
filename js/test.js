@@ -9,22 +9,20 @@
           null and undifined.
 -----------------------------------------------------------------------*/
 
-
-function syaHello(){
-     document.write ("This is main JS");
-     alert("Hellow! This is main JS");
+/*---------------------------- 
+     test1.html - JS Code 
+------------------------------*/
+function sayHello(){
+     document.write ("This is Main JS");
+     alert("Hello! This is Main JS");     
 }
 
- // Variable
- var1 = 10
- var2 = 20
- // best practices ( ; )
- var3 = 30; var4 = 40;
-
-
-// varibale
+// Variable
+var1 = 10
+var2 = 20
+var3 = 30; var4 = 40;  // best practices ( ; )
 var x = null;
-var y = 'Display data from  js variable'
+var y = 'Display data from  js variable';
 
 // print variable
 document.write(x);
