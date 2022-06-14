@@ -14,8 +14,7 @@
 ------------------------------*/
 function sayHello(){
      document.write ("This is Main JS");
-     alert("Hello! This is Main JS");     
-}
+     alert("Hello! This is Main JS");      }
 
 // Variable
 var1 = 10
@@ -26,3 +25,28 @@ var y = 'Display data from  js variable';
 
 // print variable
 document.write(x);
+
+
+/*---------------------------------------- 
+      test1.html - Registration form
+------------------------------------------*/
+var age = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+var gender = ["Male", "Female", "Transgender"];
+
+function displayAge(){
+       for (var i=0; i<age.length; i++){
+              document.write("<option>" + age[i] + "</option>");    
+       }}
+
+function displayGender(){
+       for (var i=0; i<gender.length; i++){
+              document.write("<option>" + gender[i] + "</option>"); 
+       }}
+
+function resetBtn(){
+       console.log("rest btn clicked"); 
+}
+
+function registration(){
+       console.log("registration btn clicked"); 
+}
