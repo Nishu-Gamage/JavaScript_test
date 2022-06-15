@@ -24,11 +24,11 @@ var x = null;
 var y = 'Display data from  js variable';
 
 // print variable
-document.write(x);
+// document.write(x);
 
 
 /*---------------------------------------- 
-      test1.html - Registration form
+             registration.html
 ------------------------------------------*/
 var age = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 var gender = ["Male", "Female", "Transgender"];
