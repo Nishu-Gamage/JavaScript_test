@@ -1,0 +1,47 @@
+/*---------------------------------------- 
+             registration.html
+------------------------------------------*/
+
+errorMsg1 = 'Insert all inputs';
+
+var age = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+var gender = ["Male", "Female", "Transgender"];
+var regisData = [];
+
+function displayAge(){
+     for (var i=0; i<age.length; i++){
+          document.write("<option>" + age[i] + "</option>");    
+     }
+}
+
+function displayGender(){
+     for (var i=0; i<gender.length; i++){
+          document.write("<option>" + gender[i] + "</option>"); 
+     }
+}
+
+function resetBtn(){
+     document.getElementById("regisForm").reset();
+     error.textContent = ""
+}
+
+function registration(){
+
+     regisData["firstName"]   =  document.regisForm.firstName.value;
+     regisData["lastName"]    =  document.regisForm.lastName.value;
+     regisData["pass1"]       =  document.regisForm.pass1.value;
+     regisData["pass2"]       =  document.regisForm.pass2.value;
+     regisData["mail"]        =  document.regisForm.mail.value;
+     regisData["age"]         =  document.getElementById(age);
+     regisData["gender"]      =  document.getElementById(gender);
+     
+     if(!regisData["firstName"] | !regisData["lastName"] | !regisData["pass1"] | !regisData["pass2"] | !regisData["mail"]){
+          error.textContent = "Please insert all requested data"
+     } else if(regisData["pass1"] != regisData["pass2"]){
+          error.textContent = "Please check your password and try again"
+     } else {
+          error.textContent = ""
+     }
+
+     console.log(regisData);
+}

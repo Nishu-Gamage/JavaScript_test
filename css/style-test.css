@@ -1,0 +1,9 @@
+/*---------------------------------------- 
+             registration.html
+------------------------------------------*/
+select{
+     color:red;     
+}
+option:not(first-child) {
+     color: black;
+}

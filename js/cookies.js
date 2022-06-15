@@ -21,10 +21,12 @@ function CheckboxCookie(){
 
 //------------------------- test - 3 -------------------------
 var age = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
 function displayAge(){
      for (var i=0; i<age.length; i++){
           document.write("<option>" + age[i] + "</option>");    
-     } }
+     }
+}
 
 function SelectboxCookie(){
      console.log(document.formTest3);
