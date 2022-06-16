@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <title>Nishu1</title>
+     <script type="text/javascript">
+          function SetCookie(){
+               // document.cookie = "user=John"; // update only cookie named 'user'
+               // alert(document.cookie);
+
+               document.cookie = 'name= Nishu';
+               cookieDisplay.textContent = "Display set cookie hear : " + document.cookie ;   
+               console.log(document.cookie) 
+               
+               var x = document. cookie; window. alert(x); 
+          }
+          
+          function GetCookie(){
+               var allcookies = document.cookie;
+               console.log(allcookies);
+               console.log ("All Cookies : " + allcookies );
+
+               // Get all the cookies pairs in an array
+               cookiearray = allcookies.split(';');
+
+               // Now take key value pair out of this array
+               for(var i=0; i<cookiearray.length; i++){
+                    name = cookiearray[i].split('=')[0];
+                    value = cookiearray[i].split('=')[1];
+                    console.log ("Key is : " + name );
+                    console.log ("Value is : " + value);
+               }
+               cookieDisplay.textContent = "Display cookie : " + allcookies ;
+          }
+
+
+
+     </script>
+</head>
+<body>
+     
+     <form name="myform" action="" class="m-5 p-3 mb-2 bg-warning text-dark">
+          <div class="col-md-12">
+               Enter name: <input type="text" name="customer" class="form-control"/>
+          </div>
+          <input type="button" value="Set Cookie" onclick="SetCookie()" class="btn m-3 btn-primary"/>
+          <input type="button" value="Get Cookie" onclick="GetCookie()" class="btn m-3 btn-primary"/>
+
+          <div class="text-center text-danger m-5"><h4 id="cookieDisplay"></h4></div>
+
+     </form>
+</body>
+</html>

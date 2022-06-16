@@ -1,0 +1,19 @@
+/*---------------------------
+      Registration start 
+---------------------------*/
+#regisForm{     
+     background:rgba(0, 0, 0, 0.721);
+     height: 100%;
+     color: white;
+}
+
+
+
+/*---------------------------
+      Login form start 
+---------------------------*/
+.loginform {
+     background:rgba(0,0,0,0.5);
+     height: 100%;
+     color: white;
+}

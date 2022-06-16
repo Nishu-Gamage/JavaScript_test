@@ -6,7 +6,41 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
      <title>Cookies</title>
-     <script type="text/javascript" src="js/test2.js"></script>  
+     <!-- <script type="text/javascript" src="js/test2.js"></script>   -->
+
+<script type="text/javascript">
+     
+     document.cookie ="name=Nishu"
+     document.cookie = "username=John Doe";
+     // let x;
+
+     console.log(document.cookie);
+     
+     function setCookie() {
+          document.cookie = "username=John Doe"; 
+          // document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+          // document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/"; 
+          let x = document.cookie;
+          console.log(document.cookie);
+
+     }
+
+     function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+               var c = ca[i];
+               while (c.charAt(0)==' ') c = c.substring(1,c.length);
+               if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+     }
+
+     function eraseCookie(name) {   
+          document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+     }
+
+</script>
 </head>
 
 <!------------------------- test - 1 ------------------------->
@@ -14,9 +48,8 @@
      <div class="col-md-12">
           Enter name: <input type="text" name="customer" class="form-control"/>
      </div>
-     <input type="button" value="Set Cookie" onclick="checkCookie()" class="btn mt-3 btn-primary"/>
-     
-     <input type="button" value="Get Cookie" onclick="ReadCookie()"/>
+     <input type="button" value="Set Cookie" onclick="setCookie()" class="btn m-3 btn-primary"/>
+     <input type="button" value="Get Cookie" onclick="getCookie()" class="btn m-3 btn-primary"/>
 </form>
 
 
@@ -26,11 +59,8 @@
 
 
 
-
-
-
 <!------------------------- test - 2 ------------------------->
-<form  name="formTest2" action="" class="m-5 p-3 mb-2 bg-warning text-dark">
+<!-- <form  name="formTest2" action="" class="m-5 p-3 mb-2 bg-warning text-dark">
      <div class="form-check">
           <label><input class="form-check-input" type="checkbox" value="1" name="one" >One</label>
      </div>
@@ -41,10 +71,10 @@
           <label><input class="form-check-input" type="checkbox" value="3" name="three" >Three</label>
      </div>
      <input type="button" value="Checkbox Set Cookie" onclick="CheckboxCookie();" class="btn mt-3 btn-primary"/>
-</form>
+</form> -->
 
 <!------------------------- test - 3 ------------------------->
-<form  name="formTest3" action="" class="m-5 p-3 mb-2 bg-warning text-dark">
+<!-- <form  name="formTest3" action="" class="m-5 p-3 mb-2 bg-warning text-dark">
      <div class="row mt-3">
           <div class="col-xs-6 col-sm-6 col-md-6">
                <select class="form-select mb-3" name="select">
@@ -62,4 +92,4 @@
           </div>
      </div>
      <input type="button" value="Selectbox Set Cookie" onclick="SelectboxCookie();" class="btn mt-3 btn-primary"/>
-</form>
+</form> -->
