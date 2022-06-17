@@ -8,7 +8,7 @@
      <!-- Imports -->     
      <link rel="stylesheet" href="css/styles.css">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-     <script type="text/javascript" src="js/registration.js"></script>   
+     <script type="text/javascript" src="js/main.js"></script>   
 </head>
 <body>
 
@@ -56,7 +56,7 @@
                               <div class="form-group">
                                    <select class="form-select form-select-lg" id="age">
                                         <option disabled selected>Age</option>
-                                        <script>displayAge()</script>
+                                        <script>displayAge("regisreation")</script>
                                    </select>
                               </div>
                          </div>
@@ -64,7 +64,7 @@
                               <div class="form-group">
                                    <select class="form-select form-select-lg" id="gender">
                                         <option disabled selected>Gender</option>
-                                        <script>displayGender()</script>
+                                        <script>displayGender("regisreation")</script>
                                    </select>
                               </div>
                          </div>
@@ -72,8 +72,8 @@
                     <div class="text-center text-danger mb-4"><h4 id="error">　</h4></div>
                     <!-- btn set -->
                     <div class="text-center mb-4">                   
-                         <button type="button" class="btn btn-primary btn-lg text-center" onclick="registration()" >Register</button>
-                         <button type="button" class="btn btn-danger btn-lg text-center ms-5" onclick="resetBtn()">Reset</button>
+                         <button type="button" class="btn btn-primary btn-lg text-center ms-4 me-3 mt-3" onclick="registration()" >Register</button>
+                         <button type="button" class="btn btn-danger btn-lg text-center ms-4 me-3 mt-3" onclick="resetBtn()">Reset</button>
                     </div>
                </form>
           </div>

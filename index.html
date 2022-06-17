@@ -8,16 +8,47 @@
      <!-- Imports -->
      <link rel="stylesheet" href="css/styles.css">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-     <script type="text/javascript" src="js/main.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script><script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-     <div>
-
-          <button onclick="sayHello()" class="btn btn-primary m-5">Say Hello</button>
-
-          <h3 class="ml-5"><script>document.write(y);</script></h3>     
-
+<!-- Registration form -->
+<div class="indexStart" style="background-image:url('img/indexback.jpg');">
+     <div class="container p-3">
+          <div class="text-success"><h2>Welcome to the horoscope sign site</h2></div>
+          <div class="text-secondary text-center mt-5"><h2>Choose your expectations and look for results that fit your horoscope</h2></div>
+          <div class="searchform p-2">
+               <form action="">
+                    <div class="row">
+                         <div class="col-xs-12 col-sm-12 col-md-12">
+                              <table class="table table-borderless">
+                                   <thead class="text-center">
+                                        <th>Age</th> <th>Gender</th> <th>Civil status</th>
+                                   </thead>
+                                   <tbody class="text-center">
+                                        <tr>
+                                             <td><script type="text/javascript">displayAge("index")</script></td>
+                                             <td><script type="text/javascript">displayGender("index")</script></td>
+                                             <td><script type="text/javascript">displayCivilstatu()</script></td>
+                                        </tr>
+                                        <th>Employment status</th> <th>Educational qualifications</th> <th>Assets</th>
+                                        <tr>
+                                             <td>
+                                                  <script type="text/javascript">employmentStatus()</script> 
+                                             </td>
+                                             <td>
+                                                  <script type="text/javascript">educationalQualifications()</script> 
+                                             </td>
+                                             <td>
+                                                  <script type="text/javascript">assets()</script> 
+                                             </td>
+                                        </tr>
+                                   </tbody>
+                              </table>
+                         </div>
+                    </div>
+               </form>
+          </div>
      </div>
-
+</div>
 </body>
 </html>
