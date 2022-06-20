@@ -36,6 +36,16 @@ function displayGender(formname){
           }
      }
 }
+// registration & index
+function resetBtn(formname){
+     if(formname == "regisreation"){
+          document.getElementById("regisForm").reset();
+          error.textContent = "　";
+     } else if(formname == "index"){
+          document.getElementById("indexform").reset();
+          error.textContent = "　";
+     }
+}
 
 
 /*--------------------------------------------
@@ -43,13 +53,7 @@ function displayGender(formname){
 ---------------------------------------------*/
 var regisData = [];
 
-function resetBtn(){
-     document.getElementById("regisForm").reset();
-     error.textContent = "　";
-}
-
 function registration(){
-     
      // get data from -----inputs-----
      var name1 =  document.regisForm.firstName.value;
      var name2 =  document.regisForm.lastName.value;
@@ -61,6 +65,7 @@ function registration(){
      var age   =  age_select.options[age_select.selectedIndex].value;
      var gen_select =  document.getElementById('gender');
      var gender = gen_select.options[gen_select.selectedIndex].value;
+     
      // check conditions
      if(!name1 | !name2 | !pass1 | !pass2 | !email | age=='Age' | gender=='Gender'){
           error.textContent = "Please insert all requested data"
