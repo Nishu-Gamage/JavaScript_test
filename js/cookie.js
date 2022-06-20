@@ -75,19 +75,6 @@ function ReadCookie(){
      // }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //------------------------- test - 2 -------------------------
 function CheckboxCookie(){
      if(document.formTest2.one.value == 1){          

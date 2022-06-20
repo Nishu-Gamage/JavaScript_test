@@ -17,7 +17,7 @@
           <div class="text-success"><h2>Welcome to the horoscope sign site</h2></div>
           <div class="text-secondary text-center mt-5 mb-5"><h2>Choose your expectations and look for results that fit your horoscope</h2></div>
           <div class="searchform p-2 mb-5">
-               <form action="" id="indexform">
+               <form action="" id="indexform" name="indexform">
                     <div class="row">
                          <div class="col-xs-12 col-sm-12 col-md-12">
                               <table class="table table-borderless">
@@ -47,7 +47,7 @@
                               <div class="text-center text-danger mt-5 mb-5"><h4 id="error">　</h4></div>
                               <!-- btn -->
                               <div class="text-center my-5">
-                                   <button type="button" class="btn btn-danger btn-lg active mt-5">Search my horoscope results</button>
+                                   <button type="button" onclick="horoscopeResult()" class="btn btn-danger btn-lg active mt-5">Search horoscope results</button>
                                    <button type="button" onclick="resetBtn('index')" class="btn btn-secondary btn-lg active ms-3 mt-5">Reset</button>
                               </div>
                          </div>

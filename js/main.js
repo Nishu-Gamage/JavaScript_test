@@ -13,7 +13,7 @@ function displayAge(formname){
           else if(formname == "index"){
                for (var i=0; i<display_age.length; i++){
                     document.write(
-                         "<input type='checkbox' class='btn-check' id= age"+[i] + ">" +
+                         "<input type='checkbox' value='1'  class='agebox btn-check' id= age"+[i] + ">" +
                          "<label class='btn btn-outline-primary m-1' for= age"+[i] + ">" + display_age[i] +
                          "</label></input>");                    
                }
@@ -29,7 +29,7 @@ function displayGender(formname){
           else if(formname == "index"){
                for (var i=0; i<display_gender.length; i++){
                     document.write(
-                         "<input type='checkbox' class='btn-check' id=gen"+[i] + ">" +
+                         "<input type='checkbox' class='genderbox btn-check' id=gen"+[i] + ">" +
                          "<label class='btn btn-outline-success m-1' for=gen"+[i] + ">" + display_gender[i] +
                          "</label></input>");                    
                }
@@ -71,11 +71,11 @@ function registration(){
      
      // check conditions
      if(!name1 | !name2 | !pass1 | !pass2 | !email | age=='Age' | gender=='Gender'){
-          error.textContent = "Please insert all requested data"
+          error.textContent = "Please insert all requested data";
      } else if(pass1 != pass2){
-          error.textContent = "Please check your passwords and try again"
+          error.textContent = "Please check your passwords and try again";
      } else {
-          error.textContent = "　"
+          error.textContent = "　";
           regisData["firstName"]   =  name1;
           regisData["lastName"]    =  name2;
           regisData["password"]    =  pass2;
@@ -95,7 +95,7 @@ function registration(){
 var loginID = "nishu";
 var loginPass = "pass123";
 
-function userLogin(){     
+function userLogin(){
      // get data from -----inputs-----
      var inputValue1 = document.loginForm.loginid.value;
      var inputValue2 = document.loginForm.LoginPassword.value;
@@ -104,7 +104,8 @@ function userLogin(){
      if(inputValue1 != loginID || inputValue2 != loginPass || inputValue1 == "" || inputValue2 == ""){
           error.textContent = "Check your inputs";
      } else if(loginID==inputValue1 && loginPass==inputValue2){
-          console.log(inputValue1 , inputValue2);     
+          console.log(inputValue1 , inputValue2); 
+          error.textContent = "　";    
      }
 }
 
@@ -113,14 +114,14 @@ function userLogin(){
               index.html only
 ----------------------------------------------*/
 var display_civilstatus = ["Married", "Single", "Divorced", "A lover"];
-var employment_status = ["Full-Time", "Part-Time", "Temporary", "Unemployed"]
-var educational_qualifications = ["certificate", "diploma", "degree"]
-var asset = ["Vehicles", "Land", "Building", "Cash"]
+var employment_status = ["Full-Time", "Part-Time", "Temporary", "Unemployed"];
+var educational_qualifications = ["degree", "diploma", "certificate"];
+var asset = ["Vehicles", "Land", "Building", "Cash"];
 
 function displayCivilstatu(){
      for (var i=0; i<display_civilstatus.length; i++){
           document.write(
-               "<input type='checkbox' class='btn-check' id=cv"+[i] + ">" +
+               "<input type='checkbox' value='"+[i] + "' class='civSbox btn-check' id=cv"+[i] + ">" +
                     "<label class='btn btn-outline-primary m-1' for=cv"+[i] + ">" + display_civilstatus[i] +
                "</label></input>");                
      }
@@ -128,7 +129,7 @@ function displayCivilstatu(){
 function employmentStatus(){
      for (var i=0; i<employment_status.length; i++){
           document.write(
-               "<input type='checkbox' class='btn-check' id=em"+[i] + ">" +
+               "<input type='checkbox' class='empSbox btn-check' id=em"+[i] + ">" +
                     "<label class='btn btn-outline-success m-1' for=em"+[i] + ">" + employment_status[i] +
                "</label></input>");
      }
@@ -136,7 +137,7 @@ function employmentStatus(){
 function educationalQualifications(){
      for (var i=0; i<educational_qualifications.length; i++){
           document.write(
-               "<input type='checkbox' class='btn-check' id=eq"+[i] + ">" +
+               "<input type='checkbox' class='eduQbox btn-check' id=eq"+[i] + ">" +
                     "<label class='btn btn-outline-primary m-1' for=eq"+[i] + ">" + educational_qualifications[i] +
                "</label></input>");
      }
@@ -144,8 +145,91 @@ function educationalQualifications(){
 function assets(){
      for (var i=0; i<asset.length; i++){
           document.write(
-               "<input type='checkbox' class='btn-check' id=as"+[i] + ">" +
+               "<input type='checkbox' class='assetsbox btn-check' id=as"+[i] + ">" +
                     "<label class='btn btn-outline-success m-1' for=as"+[i] + ">" + asset[i] +
-               "</label></input>");                    
+               "</label></input>");
+     }
+}
+
+// Start check horoscope result 
+var age_checkedItems = [];
+var gender_checkedItems = [];
+var civS_checkedItems = [];
+var empS_checkedItems = [];
+var eduQ_checkedItems = [];
+var assets_checkedItems = [];
+var age_inputElements = document.getElementsByClassName('agebox');
+var gender_inputElements = document.getElementsByClassName('genderbox');
+var civS_inputElements = document.getElementsByClassName('civSbox');
+var empS_inputElements = document.getElementsByClassName('empSbox');
+var eduQ_inputElements = document.getElementsByClassName('eduQbox');
+var assets_inputElements = document.getElementsByClassName('assetsbox');
+
+function ageInputElements(){
+     for(var i=0; age_inputElements[i]; ++i){
+          if(age_inputElements[i].checked){
+               age_checkedItems[i] = display_age[i];
+               if(age_checkedItems[i] == 10) { return "10";} 
+               else if (age_checkedItems[i] == 20) { return "20"; }
+               else if (age_checkedItems[i] == 30) { return "30"; }
+               else if (age_checkedItems[i] == 40) { return "40"; }
+               else if (age_checkedItems[i] == 50) { return "50"; }
+               else if (age_checkedItems[i] == 60) { return "60"; }
+               else if (age_checkedItems[i] == 70) { return "70"; }
+               else if (age_checkedItems[i] == 80) { return "80"; }
+          }
+     }
+}
+function genderInputElements(){
+     for(var i=0; gender_inputElements[i]; ++i){
+          if(gender_inputElements[i].checked){
+               gender_checkedItems[i] = display_gender[i];
+               if(gender_checkedItems[i] == "Male") { return "Male";} 
+               else if (gender_checkedItems[i] == 'Female') { return "Female"; }
+               else if (gender_checkedItems[i] == 'Transgender') { return "Transgender"; }
+          }
+     }
+}
+// function civilStatusInputElements(){
+//      for(var i = 0; i < civS_inputElements.length; i++){
+//           civS_checkedItems.push(civS_inputElements[i].value)
+//      }
+// }
+function employmentInputElements(){
+     for(var i=0; empS_inputElements[i]; ++i){
+          if(empS_inputElements[i].checked){
+               empS_checkedItems[i] = employment_status[i];
+               if(empS_checkedItems[i] == "Full-Time" ) { return "Full-Time" }
+               else if(empS_checkedItems[i] == "Part-Time") { return "Part-Time" }
+               else if(empS_checkedItems[i] == "Temporary") { return "Temporary" }
+               else if(empS_checkedItems[i] == "Unemployed") { return "Unemployed" }
+          }
+     }
+}
+function educationalInputElements(){
+     for(var i=0; eduQ_inputElements[i]; ++i){
+          if(eduQ_inputElements[i].checked){
+               eduQ_checkedItems[i] = educational_qualifications[i];
+               if(eduQ_checkedItems[i] == "degree") { return "Degree" }
+               else if(eduQ_checkedItems[i] == "diploma") { return "Diploma" }
+               else if(eduQ_checkedItems[i] == "certificate") { return "Certificate" }
+          }
+     }
+}
+
+
+function horoscopeResult(){
+
+     if(!ageInputElements()){ error.textContent = "Select Age"; }
+     else if(!genderInputElements()){ error.textContent = "Select Gender";}
+     else if(!civilStatusInputElements()){ error.textContent = "Select Civil Status";}
+     else if(!employmentInputElements()){ error.textContent = "Select Employment status";}
+     else if(!educationalInputElements()){ error.textContent = "Select Educational qualifications";}
+     else {
+          console.log(ageInputElements());
+          console.log(genderInputElements());
+          console.log(civilStatusInputElements());
+          console.log(employmentInputElements());
+          console.log(educationalInputElements());
      }
 }
