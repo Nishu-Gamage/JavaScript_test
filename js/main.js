@@ -14,7 +14,7 @@ function displayAge(formname){
                for (var i=0; i<display_age.length; i++){
                     document.write(
                          "<input type='checkbox' class='btn-check' id= age"+[i] + ">" +
-                              "<label class='btn btn-outline-primary m-1' for= age"+[i] + ">" + display_age[i] +
+                         "<label class='btn btn-outline-primary m-1' for= age"+[i] + ">" + display_age[i] +
                          "</label></input>");                    
                }
           }
@@ -30,7 +30,7 @@ function displayGender(formname){
                for (var i=0; i<display_gender.length; i++){
                     document.write(
                          "<input type='checkbox' class='btn-check' id=gen"+[i] + ">" +
-                              "<label class='btn btn-outline-success m-1' for=gen"+[i] + ">" + display_gender[i] +
+                         "<label class='btn btn-outline-success m-1' for=gen"+[i] + ">" + display_gender[i] +
                          "</label></input>");                    
                }
           }
@@ -43,6 +43,9 @@ function resetBtn(formname){
           error.textContent = "　";
      } else if(formname == "index"){
           document.getElementById("indexform").reset();
+          error.textContent = "　";
+     } else if(formname == "login"){
+          document.getElementById("loginForm").reset();
           error.textContent = "　";
      }
 }
@@ -89,6 +92,21 @@ function registration(){
 /*--------------------------------------------
               login.html only
 ---------------------------------------------*/
+var loginID = "nishu";
+var loginPass = "pass123";
+
+function userLogin(){     
+     // get data from -----inputs-----
+     var inputValue1 = document.loginForm.loginid.value;
+     var inputValue2 = document.loginForm.LoginPassword.value;
+
+     // check conditions
+     if(inputValue1 != loginID || inputValue2 != loginPass || inputValue1 == "" || inputValue2 == ""){
+          error.textContent = "Check your inputs";
+     } else if(loginID==inputValue1 && loginPass==inputValue2){
+          console.log(inputValue1 , inputValue2);     
+     }
+}
 
 
 /*--------------------------------------------
@@ -104,7 +122,7 @@ function displayCivilstatu(){
           document.write(
                "<input type='checkbox' class='btn-check' id=cv"+[i] + ">" +
                     "<label class='btn btn-outline-primary m-1' for=cv"+[i] + ">" + display_civilstatus[i] +
-               "</label></input>");                    
+               "</label></input>");                
      }
 }
 function employmentStatus(){
@@ -112,7 +130,7 @@ function employmentStatus(){
           document.write(
                "<input type='checkbox' class='btn-check' id=em"+[i] + ">" +
                     "<label class='btn btn-outline-success m-1' for=em"+[i] + ">" + employment_status[i] +
-               "</label></input>");                    
+               "</label></input>");
      }
 }
 function educationalQualifications(){
@@ -120,7 +138,7 @@ function educationalQualifications(){
           document.write(
                "<input type='checkbox' class='btn-check' id=eq"+[i] + ">" +
                     "<label class='btn btn-outline-primary m-1' for=eq"+[i] + ">" + educational_qualifications[i] +
-               "</label></input>");                    
+               "</label></input>");
      }
 }
 function assets(){
