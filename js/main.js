@@ -1,7 +1,7 @@
 /*--------------------------------------------
           Use for more than one html
 ---------------------------------------------*/
-// registration & index
+// Display Age registration & index
 var display_age = [10, 20, 30, 40, 50, 60, 70, 80];
 var display_gender = ["Male", "Female", "Transgender"];
 
@@ -20,7 +20,7 @@ function displayAge(formname){
           }
      }
 }
-// registration & index
+// Display Gender registration & index
 function displayGender(formname){
      for (var i=0; i<display_gender.length; i++){
           if(formname == "regisreation"){
@@ -36,7 +36,7 @@ function displayGender(formname){
           }
      }
 }
-// registration & index
+// Reset Btn registration & index
 function resetBtn(formname){
      if(formname == "regisreation"){
           document.getElementById("regisForm").reset();
@@ -44,6 +44,12 @@ function resetBtn(formname){
      } else if(formname == "index"){
           document.getElementById("indexform").reset();
           error.textContent = "　";
+          age_checkedItems = [];
+          gender_checkedItems = [];
+          civS_checkedItems = [];
+          empS_checkedItems = [];
+          eduQ_checkedItems = [];
+          assets_checkedItems = [];
      } else if(formname == "login"){
           document.getElementById("loginForm").reset();
           error.textContent = "　";
@@ -105,7 +111,7 @@ function userLogin(){
           error.textContent = "Check your inputs";
      } else if(loginID==inputValue1 && loginPass==inputValue2){
           console.log(inputValue1 , inputValue2); 
-          error.textContent = "　";    
+          error.textContent = "　";
      }
 }
 
@@ -237,23 +243,33 @@ function assetsInputElements(){
      }
      return assets_checkedItems.join();
 }
+// Collect CheckedBox Result
+function collectCheckedBoxResult(){
 
+     var collectCheckedBox = [];
+
+     if(!ageInputElements()){ return error.textContent = "Select Age"; }
+     else if(!genderInputElements()){ return error.textContent = "Select Gender";}
+     else if(!civilStatusInputElements()){ return error.textContent = "Select Civil Status";}
+     else if(!employmentInputElements()){ return error.textContent = "Select Employment Status";}
+     else if(!educationalInputElements()){ return error.textContent = "Select Educational Qualifications";}
+     else if(!assetsInputElements()){ return error.textContent = "Select Assets";}
+     else {
+          error.textContent = "　";
+          collectCheckedBox["ageIn"]   =  ageInputElements();
+          collectCheckedBox["genIn"]   =  genderInputElements();
+          collectCheckedBox["civIn"]   =  civilStatusInputElements();
+          collectCheckedBox["empIn"]   =  employmentInputElements();
+          collectCheckedBox["eduIn"]   =  educationalInputElements();
+          collectCheckedBox["astIn"]   =  assetsInputElements();
+     }
+
+     return collectCheckedBox;
+
+}
 
 function horoscopeResult(){
 
-     if(!ageInputElements()){ error.textContent = "Select Age"; }
-     else if(!genderInputElements()){ error.textContent = "Select Gender";}
-     else if(!civilStatusInputElements()){ error.textContent = "Select Civil Status";}
-     else if(!employmentInputElements()){ error.textContent = "Select Employment Status";}
-     else if(!educationalInputElements()){ error.textContent = "Select Educational Qualifications";}
-     else if(!assetsInputElements()){ error.textContent = "Select Assets";}
-     else {
-          console.log(ageInputElements());
-          console.log(genderInputElements());
-          console.log(civilStatusInputElements());
-          console.log(employmentInputElements());
-          console.log(educationalInputElements());
-          console.log(assetsInputElements());
-     }
+     console.log(collectCheckedBoxResult());
 
 }
