@@ -31,7 +31,7 @@ function displayGender(formname){
                     document.write(
                          "<input type='checkbox' class='genderbox btn-check' id=gen"+[i] + ">" +
                          "<label class='btn btn-outline-success m-1' for=gen"+[i] + ">" + display_gender[i] +
-                         "</label></input>");                    
+                         "</label></input>");
                }
           }
      }
@@ -115,7 +115,7 @@ function userLogin(){
 ----------------------------------------------*/
 var display_civilstatus = ["Married", "Single", "Divorced", "A lover"];
 var employment_status = ["Full-Time", "Part-Time", "Temporary", "Unemployed"];
-var educational_qualifications = ["degree", "diploma", "certificate"];
+var educational_qualifications = ["Degree", "Diploma", "Certificate"];
 var asset = ["Vehicles", "Land", "Building", "Cash"];
 
 function displayCivilstatu(){
@@ -158,6 +158,7 @@ var civS_checkedItems = [];
 var empS_checkedItems = [];
 var eduQ_checkedItems = [];
 var assets_checkedItems = [];
+
 var age_inputElements = document.getElementsByClassName('agebox');
 var gender_inputElements = document.getElementsByClassName('genderbox');
 var civS_inputElements = document.getElementsByClassName('civSbox');
@@ -190,11 +191,19 @@ function genderInputElements(){
           }
      }
 }
-// function civilStatusInputElements(){
-//      for(var i = 0; i < civS_inputElements.length; i++){
-//           civS_checkedItems.push(civS_inputElements[i].value)
-//      }
-// }
+function civilStatusInputElements(){
+     
+     var y = 0;
+
+     for (var i = 0; i < civS_inputElements.length; i++) {
+          if (civS_inputElements[i].checked) {
+               civS_checkedItems[y] = display_civilstatus[i];
+               y++;  }
+     }
+     //  Return to display the selected CheckBox values.
+     return civS_checkedItems.join();
+
+}
 function employmentInputElements(){
      for(var i=0; empS_inputElements[i]; ++i){
           if(empS_inputElements[i].checked){
@@ -210,11 +219,23 @@ function educationalInputElements(){
      for(var i=0; eduQ_inputElements[i]; ++i){
           if(eduQ_inputElements[i].checked){
                eduQ_checkedItems[i] = educational_qualifications[i];
-               if(eduQ_checkedItems[i] == "degree") { return "Degree" }
-               else if(eduQ_checkedItems[i] == "diploma") { return "Diploma" }
-               else if(eduQ_checkedItems[i] == "certificate") { return "Certificate" }
+               if(eduQ_checkedItems[i] == "Degree") { return "Degree" }
+               else if(eduQ_checkedItems[i] == "Diploma") { return "Diploma" }
+               else if(eduQ_checkedItems[i] == "Certificate") { return "Certificate" }
           }
      }
+}
+function assetsInputElements(){
+
+     var y = 0;
+
+     for(var i=0; i<assets_inputElements.length; i++){
+          if(assets_inputElements[i].checked){
+               assets_checkedItems[y] = asset[i];
+               y++;
+          }
+     }
+     return assets_checkedItems.join();
 }
 
 
@@ -223,13 +244,16 @@ function horoscopeResult(){
      if(!ageInputElements()){ error.textContent = "Select Age"; }
      else if(!genderInputElements()){ error.textContent = "Select Gender";}
      else if(!civilStatusInputElements()){ error.textContent = "Select Civil Status";}
-     else if(!employmentInputElements()){ error.textContent = "Select Employment status";}
-     else if(!educationalInputElements()){ error.textContent = "Select Educational qualifications";}
+     else if(!employmentInputElements()){ error.textContent = "Select Employment Status";}
+     else if(!educationalInputElements()){ error.textContent = "Select Educational Qualifications";}
+     else if(!assetsInputElements()){ error.textContent = "Select Assets";}
      else {
           console.log(ageInputElements());
           console.log(genderInputElements());
           console.log(civilStatusInputElements());
           console.log(employmentInputElements());
           console.log(educationalInputElements());
+          console.log(assetsInputElements());
      }
+
 }
