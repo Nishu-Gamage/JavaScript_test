@@ -61,7 +61,6 @@ function resetBtn(formname){
           registration.html only
 ---------------------------------------------*/
 var regisData = [];
-// var regisData = new Object(); 
 
 function registration(){
      // get data from -----inputs-----
@@ -83,7 +82,6 @@ function registration(){
           error.textContent = "Please check your passwords and try again";
      } else {
           error.textContent = "　";
-          // regisData.firstName   =  name1;
           regisData["firstName"]   =  name1;
           regisData["lastName"]    =  name2;
           regisData["password"]    =  pass2;
