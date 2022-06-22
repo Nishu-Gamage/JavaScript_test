@@ -98,7 +98,10 @@ var index = str6.lastIndexOf( "one" );
 document.write("lastIndexOf found String 　:　　" + index + "<br><br>");
 
 // localeCompare ()
-var str7 = new String( "This is beautiful string" )
+var str7 = new String( "This is beautiful string" );
+
+var result = str7.localeCompare("This is beautiful string");
+document.write("locale Compare  　:　　" + result + "<br><br>");
 
 // match ()
 var str8 = "For more information, see Chapter 3.4.5.1";

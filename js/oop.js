@@ -25,7 +25,7 @@ regisData["firstName"]   =  "name1";    // Assign properties to the Array
 
 
 /*------------------------------------------------------------------ 
-                    OBJECTS - The ‘with’ Keyword
+                    The ‘with’ Keyword
 ------------------------------------------------------------------*/
 document.write ("<u>The ‘with’ Keyword</u><br>");
 
@@ -54,6 +54,8 @@ function books(title, author){
 }
 var myBooks = new books("English", "Tom");
 // myBooks.addPrice(100);
+myBooks.addIncom(100);
+
 
 document.write("With 'with' title is : " + myBooks.title + "<br>");
 document.write("With 'with' author is : " + myBooks.author + "<br>");
