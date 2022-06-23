@@ -53,9 +53,9 @@ function books(title, author){
      this.addIncom = addPrice; // Assign that method as property.
 }
 var myBooks = new books("English", "Tom");
-// myBooks.addPrice(100);
-myBooks.addIncom(100);
 
+// myBooks.addPrice(100);     // this is Wrong
+myBooks.addIncom(100);
 
 document.write("With 'with' title is : " + myBooks.title + "<br>");
 document.write("With 'with' author is : " + myBooks.author + "<br>");
@@ -184,5 +184,96 @@ document.write("Prototype - Book price is : " + myBbook.price + "<br><br>");
 
 /*------------------------------------------------------------------ 
                     BOOLEAN - Methods
+                  toString()・valueOf()
 ------------------------------------------------------------------*/
 document.write ("<u>BOOLEAN - Methods</u><br>");
+
+// toString()
+var flag1 = new Boolean(false);
+document.write( "flag.toString is : " + flag1.toString() + "<br>");
+
+// valueOf()
+var flag2 = new Boolean(false);
+document.write( "flag.valueOf is : " + flag2.valueOf() + "<br><br>");
+
+
+
+/******************************************************************** 
+                              STRING
+          constructor　・　Length　・　 Prototype
+********************************************************************/
+document.write ("********************************************************************<br>");
+document.write ("　　　　　　　　　　　<u><b>STRING</b></u><br>");
+document.write ("********************************************************************<br><br>");
+
+// Constructor
+document.write ("<u>constructor　・　Length　・　 Prototype</u><br><br>");
+var str = new String( "This is string" );
+document.write("Constructor - str.constructor is　:　　" + str.constructor + "<br>");
+
+// Length
+var str = new String( "This is string" );
+document.write("Length 　-　 str.length is　:　　" + str.length + "<br><br>");
+
+// Prototype
+function book2(title, author){
+     this.title = title;
+     this.author = author;
+}
+var myBook2 = new book2("Perl", "Mohtashim");
+book2.prototype.price = null;
+myBook2.price = 100;
+
+document.write("Prototype - Book title is : 　 　　" + myBook2.title + "<br>");
+document.write("Prototype - Book author is : 　　" + myBook2.author + "<br>");
+document.write("Prototype - Book price is :　　　" + myBook2.price + "<br><br>");
+
+
+/*------------------------------------------------------------------ 
+                         STRING - Methods
+------------------------------------------------------------------*/
+document.write ("<u>STRING - Methods</u><br>");
+
+// charAt()hod
+var str1 = new String( "This is string" );
+
+document.writeln("str.charAt(0) is　:　　" + str1.charAt(0));
+document.writeln("<br />str.charAt(1) is　:　　" + str1.charAt(1));
+document.writeln("<br />str.charAt(2) is　:　　" + str1.charAt(2));
+document.writeln("<br />str.charAt(3) is　:　　" + str1.charAt(3));
+document.writeln("<br />str.charAt(4) is　:　　" + str1.charAt(4));
+document.writeln("<br />str.charAt(5) is　:　　" + str1.charAt(5) + "<br><br>");
+
+// contact ()
+var str2 = new String( "This isstring one" );
+var str3 = new String( "This is string two" );
+var str4 = str2.concat( str3 );
+
+document.write("Concatenated String 　:　　" + str4 + "<br><br>");
+
+// indexOf()
+var str5 = new String( "This is string one" );
+
+var index = str5.indexOf( "string" );
+document.write("indexOf found String 　:　　" + index  + "<br>");
+
+var index = str5.indexOf( "one" );
+document.write("indexOf found String 　:　　" + index  + "<br><br>");
+
+// lastIndexOf ()
+var str6 = new String( "This is string one and again string" );
+
+var index = str6.lastIndexOf( "string" );
+document.write("lastIndexOf found String 　:　　" + index + "<br>");
+
+var index = str6.lastIndexOf( "one" );
+document.write("lastIndexOf found String 　:　　" + index + "<br><br>");
+
+// localeCompare ()
+var str7 = new String( "This is beautiful string" );
+
+var result1 = str7.localeCompare("Nishu");
+var result2 = str7.localeCompare("This is beautiful string");
+
+document.write("locale Compare  　:　　" + result1 + "<br>");
+document.write("locale Compare  　:　　" + result2 + "<br><br>");
