@@ -1,4 +1,3 @@
-
 document.write ("********************************************************************<br>");
 document.write ("　<u><b>Regular Expressions</b></u><br>");
 document.write ("********************************************************************<br><br>");
@@ -237,23 +236,37 @@ document.write(strV + "　　<b class='text-danger'> /\w+$/g</b> "+" 　 =　"+s
 document.write(strV + "　　<b class='text-danger'> /^\w+$/g</b> "+" 　 =　"+strV.match(/^\w+$/g)+"<br><br>");
 
 
+// variable
+let exeV  = "Hi Js i am nishu!Gamage12@gmail.com and i love js";
+
+document.write(exeV + "　　<b class='text-danger'> /\w+@gmail.com/</b> "+" 　 =　"+exeV.match(/\w+@gmail.com/)+"<br>");
+document.write(exeV + "　　<b class='text-danger'> /a\w/g</b> "+" 　 =　"+exeV.match(/a\w/g)+"<br>");
+document.write(exeV + "　　<b class='text-danger'> /a\w+/g</b> "+" 　 =　"+exeV.match(/a\w+/g)+"<br>");
+document.write(exeV + "　　<b class='text-danger'> /\w+a\w/g</b> "+" 　 =　"+exeV.match(/\w+a\w/g)+"<br>");
+document.write(exeV + "　　<b class='text-danger'> /\w*a\w/g</b> "+" 　 =　"+exeV.match(/\w*a\w/g)+"<br><br>");
+
+document.write(exeV + "　　<b class='text-danger'> /js/g</b> "+" 　 =　"+exeV.match(/js/g)+"<br>");
+document.write(exeV + "　　<b class='text-danger'> /\ws/g</b> "+" 　 =　"+exeV.match(/\ws/g)+"<br><br>");
+
+document.write(exeV + "　　<b class='text-danger'> /l\w{3}/g</b> "+" 　 =　"+exeV.match(/l\w{3}/g)+"<br><br>");
+
+document.write(exeV + "　　<b class='text-danger'> /\s/g</b> "+" 　 =　"+exeV.match(/\s/g)+"<br><br>");
 
 
 
 
 
+
+// class test
 let text = "Visit W3Sc8hools";
 let pattern = /[0-9]/;
 let result = text.match(pattern);
 
-console.log(result);
-document.write(result);
+document.write("<u>class test</u><br>");
+document.write(result +"<br>");
 
 let a = "nishu@test!";
 let p = a.replace(/\W/g,"");
 // let p = a.replace(/[^a-zA-Z ]/g,"");
 
-console.log(p);
 document.write(p);
-
- 
