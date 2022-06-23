@@ -7,90 +7,90 @@ document.write ("***************************************************************
      let txtV = "nishu!Gamage!@1234.com";
      let strV = "Hello Ben10";
 
-// // ----------------------------------------------------------------------
-// document.write("<u> Find any character between the brackets </u><br>");
-// // ----------------------------------------------------------------------
+// ----------------------------------------------------------------------
+document.write("<u> Find any character between the brackets </u><br>");
+// ----------------------------------------------------------------------
 
-//      let characterPtn1 = /[abc]/;
-//      let characterPtn2 = /[abc]/g;
+     let characterPtn1 = /[abc]/;
+     let characterPtn2 = /[abc]/g;
 
-//      let characterRes1 = txtV.match(characterPtn1);
-//      let characterRes2 = txtV.match(characterPtn2);
+     let characterRes1 = txtV.match(characterPtn1);
+     let characterRes2 = txtV.match(characterPtn2);
 
-//      document.write(txtV + "　　<b class='text-danger'>"+ characterPtn1 +"</b>　　=　　" + characterRes1 + '<br>');
-//      document.write(txtV + "　　<b class='text-danger'>"+ characterPtn2 +"</b>　 =　　" + characterRes2 + '<br><br>');
-
-
-
-// // ----------------------------------------------------------------------
-// document.write("<u> Find any character NOT between the brackets </u><br>");
-// // ----------------------------------------------------------------------
-
-//      let nonCharacterPtn1 = /[^abc]/;
-//      let nonCharacterPtn2 = /[^abc]/g;
-//      let nonCharacterPtn3 = /[^abc]+/g;
-
-//      let nonCharacterRes1 = txtV.match(nonCharacterPtn1);
-//      let nonCharacterRes2 = txtV.match(nonCharacterPtn2);
-//      let nonCharacterRes3 = txtV.match(nonCharacterPtn3);
-
-//      document.write(txtV + "　　<b class='text-danger'>"+ nonCharacterPtn1 +"</b>　　 　 =　　" + nonCharacterRes1 + '<br>');
-//      document.write(txtV + "　　<b class='text-danger'>"+ nonCharacterPtn2 +"</b>　　　=　　" + nonCharacterRes2 + '<br>');
-//      document.write(txtV + "　　<b class='text-danger'>"+ nonCharacterPtn3 +"</b>　 　=　　" + nonCharacterRes3 + '<br><br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ characterPtn1 +"</b>　　=　　" + characterRes1 + '<br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ characterPtn2 +"</b>　 =　　" + characterRes2 + '<br><br>');
 
 
 
-// // ----------------------------------------------------------------------
-// document.write("<u> Find any character between the brackets (any digit) </u><br>");
-// // ----------------------------------------------------------------------
+// ----------------------------------------------------------------------
+document.write("<u> Find any character NOT between the brackets </u><br>");
+// ----------------------------------------------------------------------
 
-//      let anyDigitPtn1 = /[0-9]/;
-//      let anyDigitPtn2 = /[0-9]/g;
-//      let anyDigitPtn3 = /[0-9]+/g;
+     let nonCharacterPtn1 = /[^abc]/;
+     let nonCharacterPtn2 = /[^abc]/g;
+     let nonCharacterPtn3 = /[^abc]+/g;
 
-//      let anyDigitRes1 = txtV.match(anyDigitPtn1);
-//      let anyDigitRes2 = txtV.match(anyDigitPtn2);
-//      let anyDigitRes3 = txtV.match(anyDigitPtn3);
+     let nonCharacterRes1 = txtV.match(nonCharacterPtn1);
+     let nonCharacterRes2 = txtV.match(nonCharacterPtn2);
+     let nonCharacterRes3 = txtV.match(nonCharacterPtn3);
 
-//      document.write(txtV + "　　<b class='text-danger'>"+ anyDigitPtn1 +"</b>　　　　　=　　" + anyDigitRes1 + '<br>');
-//      document.write(txtV + "　　<b class='text-danger'>"+ anyDigitPtn2 +"</b>　　　　 =　　" + anyDigitRes2 + '<br>');
-//      document.write(txtV + "　　<b class='text-danger'>"+ anyDigitPtn3 +"</b>　　 　 =　　" + anyDigitRes3 + '<br><br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ nonCharacterPtn1 +"</b>　　 　 =　　" + nonCharacterRes1 + '<br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ nonCharacterPtn2 +"</b>　　　=　　" + nonCharacterRes2 + '<br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ nonCharacterPtn3 +"</b>　 　=　　" + nonCharacterRes3 + '<br><br>');
 
 
 
-// // ----------------------------------------------------------------------
-// document.write("<u> Find any character NOT between the brackets (any non-digit) </u><br>");
-// // ----------------------------------------------------------------------
+// ----------------------------------------------------------------------
+document.write("<u> Find any character between the brackets (any digit) </u><br>");
+// ----------------------------------------------------------------------
 
-//      let anyNonDigitptn1 = /[^0-9]/;
-//      let anyNonDigitptn2 = /[^0-9]/g;
-//      let anyNonDigitptn3 = /[^0-9]+/g;
+     let anyDigitPtn1 = /[0-9]/;
+     let anyDigitPtn2 = /[0-9]/g;
+     let anyDigitPtn3 = /[0-9]+/g;
+
+     let anyDigitRes1 = txtV.match(anyDigitPtn1);
+     let anyDigitRes2 = txtV.match(anyDigitPtn2);
+     let anyDigitRes3 = txtV.match(anyDigitPtn3);
+
+     document.write(txtV + "　　<b class='text-danger'>"+ anyDigitPtn1 +"</b>　　　　　=　　" + anyDigitRes1 + '<br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ anyDigitPtn2 +"</b>　　　　 =　　" + anyDigitRes2 + '<br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ anyDigitPtn3 +"</b>　　 　 =　　" + anyDigitRes3 + '<br><br>');
+
+
+
+// ----------------------------------------------------------------------
+document.write("<u> Find any character NOT between the brackets (any non-digit) </u><br>");
+// ----------------------------------------------------------------------
+
+     let anyNonDigitptn1 = /[^0-9]/;
+     let anyNonDigitptn2 = /[^0-9]/g;
+     let anyNonDigitptn3 = /[^0-9]+/g;
      
-//      let anyNonDigitRes1 = txtV.match(anyNonDigitptn1);
-//      let anyNonDigitRes2 = txtV.match(anyNonDigitptn2);
-//      let anyNonDigitRes3 = txtV.match(anyNonDigitptn3);
+     let anyNonDigitRes1 = txtV.match(anyNonDigitptn1);
+     let anyNonDigitRes2 = txtV.match(anyNonDigitptn2);
+     let anyNonDigitRes3 = txtV.match(anyNonDigitptn3);
 
-//      document.write(txtV + "　　<b class='text-danger'>"+ anyNonDigitptn1 +"</b>　　　　　=　　" + anyNonDigitRes1 + '<br>');
-//      document.write(txtV + "　　<b class='text-danger'>"+ anyNonDigitptn2 +"</b>　　　 　=　　" + anyNonDigitRes2 + '<br>');
-//      document.write(txtV + "　　<b class='text-danger'>"+ anyNonDigitptn3 +"</b>　 　 　=　　" + anyNonDigitRes3 + '<br><br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ anyNonDigitptn1 +"</b>　　　　　=　　" + anyNonDigitRes1 + '<br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ anyNonDigitptn2 +"</b>　　　 　=　　" + anyNonDigitRes2 + '<br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ anyNonDigitptn3 +"</b>　 　 　=　　" + anyNonDigitRes3 + '<br><br>');
 
 
 
-// // ----------------------------------------------------------------------
-// document.write("<u> Find any of the alternatives specified </u><br>");
-// // ----------------------------------------------------------------------
+// ----------------------------------------------------------------------
+document.write("<u> Find any of the alternatives specified </u><br>");
+// ----------------------------------------------------------------------
 
-//      let alternatives1 = /(x|y)/;
-//      let alternatives2 = /(a|n)/;
-//      let alternatives3 = /(a|n)/g;
+     let alternatives1 = /(x|y)/;
+     let alternatives2 = /(a|n)/;
+     let alternatives3 = /(a|n)/g;
 
-//      let alternativesRes1 = txtV.match(alternatives1);
-//      let alternativesRes2 = txtV.match(alternatives2);
-//      let alternativesRes3 = txtV.match(alternatives3);
+     let alternativesRes1 = txtV.match(alternatives1);
+     let alternativesRes2 = txtV.match(alternatives2);
+     let alternativesRes3 = txtV.match(alternatives3);
 
-//      document.write(txtV + "　　<b class='text-danger'>"+ alternatives1 +"</b>　　　=　　" + alternativesRes1 + '<br>');
-//      document.write(txtV + "　　<b class='text-danger'>"+ alternatives2 +"</b>　　　=　　" + alternativesRes2 + '<br>');
-//      document.write(txtV + "　　<b class='text-danger'>"+ alternatives3 +"</b>　 　=　　" + alternativesRes3 + '<br><br><br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ alternatives1 +"</b>　　　=　　" + alternativesRes1 + '<br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ alternatives2 +"</b>　　　=　　" + alternativesRes2 + '<br>');
+     document.write(txtV + "　　<b class='text-danger'>"+ alternatives3 +"</b>　 　=　　" + alternativesRes3 + '<br><br><br>');
 
 
      
@@ -161,10 +161,80 @@ document.write("<b class='bg-warning text-dark'>　s = white space　　S = not 
      document.write(txtV + "　　<b class='text-danger'>"+ backslashPtn10 +"</b>　 =　　" + backslashPtnRes10 + '<br><br>');
 
 
+     
 // ----------------------------------------------------------------------
-document.write("<u> Exercise </u><br>");
+document.write("<u> Brackets </u><br>");
+// ----------------------------------------------------------------------
+document.write("<b class='bg-warning text-dark'>　\w{x} = characters 　　　{2} = 2 characters　　</b><br>");
+document.write("<b class='bg-warning text-dark'>　\d{x} = digit 　　 　 　　{2} = 2 digits　　　 　</b><br><br>");
+
+
+document.write(txtV + "　　<b class='text-danger'> /\w{4}/g</b> "+" 　　　 =　"+txtV.match(/\w{4}/g)+"<br>");
+document.write(txtV + "　　<b class='text-danger'> /\w{2,3}/g</b> "+" 　　 = 　"+txtV.match(/\w{2,3}/g)+"<br><br>");
+
+document.write(txtV + "　　<b class='text-danger'> /\w{3}\d{1}/g</b> "+" 　 =　"+txtV.match(/\w{3}\d{1}/g)+"<br>");
+document.write(txtV + "　　<b class='text-danger'> /\w{3}\d{2}/g</b> "+" 　 =　"+txtV.match(/\w{3}\d{2}/g)+"<br><br>");
+
+
+     
+// ----------------------------------------------------------------------
+document.write("<u> Quantifier </u><br>");
+// ----------------------------------------------------------------------
+document.write("<b class='bg-warning text-dark'>　n+　=　　1 or more　　</b><br>");
+document.write("<b class='bg-warning text-dark'>　n*　 =　　0 or more　　</b><br>");
+document.write("<b class='bg-warning text-dark'>　n?　 =　　0 or 1　　　　</b><br><br>");
+
+
+document.write(txtV + "　　<b class='text-danger'> /\w+/</b> "+" 　　=　"+txtV.match(/\w+/)+"<br>");
+document.write(txtV + "　　<b class='text-danger'> /\w+/g</b> "+" 　 =　"+txtV.match(/\w+/g)+"<br><br>");
+
+document.write(txtV + "　　<b class='text-danger'> /\w*/</b> "+" 　　=　"+txtV.match(/\w*/)+"<br>");
+document.write(txtV + "　　<b class='text-danger'> /\w*/g</b> "+" 　 =　"+txtV.match(/\w*/g)+"<br><br>");
+
+document.write(txtV + "　　<b class='text-danger'> /\w?/</b> "+" 　　=　"+txtV.match(/\w?/)+"<br>");
+document.write(txtV + "　　<b class='text-danger'> /\w?/g</b> "+" 　 =　"+txtV.match(/\w?/g)+"<br>");
+document.write(txtV + "　　<b class='text-danger'> /\d?/g</b> "+" 　 =　"+txtV.match(/\d?/g)+"<br><br>");
+
+
+
+// ----------------------------------------------------------------------
+document.write("<u> Start Line　 & 　End Line </u><br>");
+// ----------------------------------------------------------------------
+document.write("<b class='bg-warning text-dark'>　^n　=　　Start Line　　</b><br>");
+document.write("<b class='bg-warning text-dark'>　n$　 =　　End Line　　</b><br><br>");
+
+document.write(txtV + "　　<b class='text-danger'> /^\w+/</b> "+" 　　=　"+txtV.match(/^\w+/)+"<br>");
+document.write(txtV + "　　<b class='text-danger'> /^\w+/g</b> "+" 　 =　"+txtV.match(/^\w+/g)+"<br><br>");
+
+document.write(txtV + "　　<b class='text-danger'> /\w+$/</b> "+" 　　=　"+txtV.match(/\w+$/)+"<br>");
+document.write(txtV + "　　<b class='text-danger'> /\w+$/g</b> "+" 　 =　"+txtV.match(/\w+$/g)+"<br><br>");
+
+
+
+// ----------------------------------------------------------------------
+document.write("<br><b class='bg-danger  text-white'><u>　　Exercise　　 </u></b><br>");
 // ----------------------------------------------------------------------
 
+document.write(strV + "　　<b class='text-danger'> /\w\w\w\w\w/</b> "+"　　=　"+strV.match(/\w\w\w\w\w/)+"<br>");
+document.write(strV + "　　<b class='text-danger'> /\w\w\w\w\w/g</b> "+" 　 =　"+strV.match(/\w\w\w\w\w/g)+"<br><br>");
+
+document.write(strV + "　　<b class='text-danger'> /\w\w\w\d/g</b> "+" 　　 =　"+strV.match(/\w\w\w\d/g)+"<br>");
+document.write(strV + "　　<b class='text-danger'> /\w\w\w\d\d/g</b> "+" 　 =　"+strV.match(/\w\w\w\d\d/g)+"<br><br>");
+
+document.write(strV + "　　<b class='text-danger'> /\w{4}/g</b> "+" 　　　 =　"+strV.match(/\w{4}/g)+"<br>");
+document.write(strV + "　　<b class='text-danger'> /\w{2,3}/g</b> "+" 　　 =　"+strV.match(/\w{2,3}/g)+"<br>");
+document.write(strV + "　　<b class='text-danger'> /\w{3}\d{2}/g</b> "+" 　 =　"+strV.match(/\w{3}\d{2}/g)+"<br><br>");
+
+document.write(strV + "　　<b class='text-danger'> /\w+/</b> "+" 　　=　"+strV.match(/\w+/)+"<br>");
+document.write(strV + "　　<b class='text-danger'> /\w+/g</b> "+" 　 =　"+strV.match(/\w+/g)+"<br><br>");
+
+document.write(strV + "　　<b class='text-danger'> /^\w+/</b> "+" 　　=　"+strV.match(/^\w+/)+"<br>");
+document.write(strV + "　　<b class='text-danger'> /^\w+/g</b> "+" 　 =　"+strV.match(/^\w+/g)+"<br><br>");
+
+document.write(strV + "　　<b class='text-danger'> /\w+$/</b> "+" 　　=　"+strV.match(/\w+$/)+"<br>");
+document.write(strV + "　　<b class='text-danger'> /\w+$/g</b> "+" 　 =　"+strV.match(/\w+$/g)+"<br><br>");
+
+document.write(strV + "　　<b class='text-danger'> /^\w+$/g</b> "+" 　 =　"+strV.match(/^\w+$/g)+"<br><br>");
 
 
 
