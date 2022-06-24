@@ -5,6 +5,7 @@ document.write ("***************************************************************
 // variable for all Regular Expression
      let txtV = "nishu!Gamage!@1234.com";
      let strV = "Hello Ben10";
+     let exeV  = "Hi Js i am nishu!Gamage12@gmail.com and i love js";
 
 // ----------------------------------------------------------------------
 document.write("<u> Find any character between the brackets </u><br>");
@@ -92,7 +93,7 @@ document.write("<u> Find any of the alternatives specified </u><br>");
      document.write(txtV + "　　<b class='text-danger'>"+ alternatives3 +"</b>　 　=　　" + alternativesRes3 + '<br><br><br>');
 
 
-     
+
 document.write ("********************************************************************<br>");
 document.write ("　<u><b>Regular Expressions - Meta Characters</b></u><br>");
 document.write ("********************************************************************<br><br>");
@@ -164,12 +165,13 @@ document.write("<b class='bg-warning text-dark'>　s = white space　　S = not 
 // ----------------------------------------------------------------------
 document.write("<u> Brackets </u><br>");
 // ----------------------------------------------------------------------
-document.write("<b class='bg-warning text-dark'>　\w{x} = characters 　　　{2} = 2 characters　　</b><br>");
-document.write("<b class='bg-warning text-dark'>　\d{x} = digit 　　 　 　　{2} = 2 digits　　　 　</b><br><br>");
+document.write("<b class='bg-warning text-dark'>　\w{x} = characters 　　　w{2} = 2 characters　　</b><br>");
+document.write("<b class='bg-warning text-dark'>　\d{x} = digit 　　　　　　d{2} = 2 digits　　　 　</b><br><br>");
 
 
 document.write(txtV + "　　<b class='text-danger'> /\w{4}/g</b> "+" 　　　 =　"+txtV.match(/\w{4}/g)+"<br>");
 document.write(txtV + "　　<b class='text-danger'> /\w{2,3}/g</b> "+" 　　 = 　"+txtV.match(/\w{2,3}/g)+"<br><br>");
+// document.write(txtV + "　　<b class='text-danger'> /\w{3,2}/g</b> "+" 　　 = 　"+txtV.match(/\w{3,2}/g)+"<br><br>");
 
 document.write(txtV + "　　<b class='text-danger'> /\w{3}\d{1}/g</b> "+" 　 =　"+txtV.match(/\w{3}\d{1}/g)+"<br>");
 document.write(txtV + "　　<b class='text-danger'> /\w{3}\d{2}/g</b> "+" 　 =　"+txtV.match(/\w{3}\d{2}/g)+"<br><br>");
@@ -222,6 +224,7 @@ document.write(strV + "　　<b class='text-danger'> /\w\w\w\d\d/g</b> "+" 　 =
 
 document.write(strV + "　　<b class='text-danger'> /\w{4}/g</b> "+" 　　　 =　"+strV.match(/\w{4}/g)+"<br>");
 document.write(strV + "　　<b class='text-danger'> /\w{2,3}/g</b> "+" 　　 =　"+strV.match(/\w{2,3}/g)+"<br>");
+// document.write(strV + "　　<b class='text-danger'> /\w{3,2}/g</b> "+" 　　 =　"+strV.match(/\w{3,2}/g)+"<br>");
 document.write(strV + "　　<b class='text-danger'> /\w{3}\d{2}/g</b> "+" 　 =　"+strV.match(/\w{3}\d{2}/g)+"<br><br>");
 
 document.write(strV + "　　<b class='text-danger'> /\w+/</b> "+" 　　=　"+strV.match(/\w+/)+"<br>");
@@ -235,11 +238,28 @@ document.write(strV + "　　<b class='text-danger'> /\w+$/g</b> "+" 　 =　"+s
 
 document.write(strV + "　　<b class='text-danger'> /^\w+$/g</b> "+" 　 =　"+strV.match(/^\w+$/g)+"<br><br>");
 
-
-// variable
-let exeV  = "Hi Js i am nishu!Gamage12@gmail.com and i love js";
-
 document.write(exeV + "　　<b class='text-danger'> /\w+@gmail.com/</b> "+" 　 =　"+exeV.match(/\w+@gmail.com/)+"<br>");
+document.write(exeV + "　　<b class='text-danger'> /\\w+\W+\w+@gmail.com/</b> "+" 　 =　"+exeV.match(/\w+\W+\w+@gmail.com/g)+"<br><br>");
+
+document.write("<b class='text-danger'> /[a-z0-9!#$%&'*+/=?^_`{|}~-]+\w+@gmail.com/</b> "+" 　 =　"
+                                   +exeV.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+\w+@gmail.com/g)+"<br>");
+
+document.write("<b class='text-danger'> /[a-z0-9!#$%&'*+/=?^_`{|}~-]+@gmail.com/</b> "+" 　 =　"
+                                   +exeV.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+@gmail.com/g)+"<br>");
+                                             
+document.write("<b class='text-danger'> /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@gmail.com/</b> "+" 　 =　"
+                                   +exeV.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@gmail.com/g)+"<br>");
+
+document.write("<b class='text-danger'> /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])/</b> "+" 　 =　"
+                                   +exeV.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])/g)+"<br><br>");
+
+
+// pattern="^((?=.*\d)(?=.*[a-z])[0-9A-Za-z]{6,20})$";
+// [a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])
+// \r\n\r\n\r\n\r\n";
+
+
+document.write(exeV + "　　<b class='text-danger'> /\\w+\W+\w+@gmail.com/</b> "+" 　 =　"+exeV.match(/\w+@gmail.com/g)+"<br>");
 document.write(exeV + "　　<b class='text-danger'> /a\w/g</b> "+" 　 =　"+exeV.match(/a\w/g)+"<br>");
 document.write(exeV + "　　<b class='text-danger'> /a\w+/g</b> "+" 　 =　"+exeV.match(/a\w+/g)+"<br>");
 document.write(exeV + "　　<b class='text-danger'> /\w+a\w/g</b> "+" 　 =　"+exeV.match(/\w+a\w/g)+"<br>");

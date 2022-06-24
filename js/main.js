@@ -184,6 +184,8 @@ function ageInputElements(){
                else if (age_checkedItems[i] == 60) { return "60"; }
                else if (age_checkedItems[i] == 70) { return "70"; }
                else if (age_checkedItems[i] == 80) { return "80"; }
+          }else if(age_inputElements[i].unchecked) {
+               return error.textContent = "Select Age";
           }
      }
 }
@@ -194,6 +196,8 @@ function genderInputElements(){
                if(gender_checkedItems[i] == "Male") { return "Male";} 
                else if (gender_checkedItems[i] == 'Female') { return "Female"; }
                else if (gender_checkedItems[i] == 'Transgender') { return "Transgender"; }
+          }else if(gender_inputElements[i].unchecked) {
+               return error.textContent = "Select Gender";
           }
      }
 }
@@ -204,7 +208,13 @@ function civilStatusInputElements(){
      for (var i = 0; i < civS_inputElements.length; i++) {
           if (civS_inputElements[i].checked) {
                civS_checkedItems[y] = display_civilstatus[i];
-               y++;  }
+               y++;  
+               console.log("sachi"); 
+          }
+          else if(civS_inputElements[i].unchecked){
+               // civS_checkedItems[i] = "";  
+               console.log("nishu"); 
+          }
      }
      //  Return to display the selected CheckBox values.
      return civS_checkedItems.join();
@@ -218,6 +228,8 @@ function employmentInputElements(){
                else if(empS_checkedItems[i] == "Part-Time") { return "Part-Time" }
                else if(empS_checkedItems[i] == "Temporary") { return "Temporary" }
                else if(empS_checkedItems[i] == "Unemployed") { return "Unemployed" }
+          }else if(empS_inputElements[i].unchecked) {
+               return error.textContent = "Select Employment Status";
           }
      }
 }
@@ -228,6 +240,8 @@ function educationalInputElements(){
                if(eduQ_checkedItems[i] == "Degree") { return "Degree" }
                else if(eduQ_checkedItems[i] == "Diploma") { return "Diploma" }
                else if(eduQ_checkedItems[i] == "Certificate") { return "Certificate" }
+          }else if(eduQ_inputElements[i].unchecked) {
+               return error.textContent = "Select Educational Qualifications";
           }
      }
 }
@@ -273,3 +287,20 @@ function horoscopeResult(){
      console.log(collectCheckedBoxResult());
 
 }
+
+function getConfirmation(){
+     var retVaasasl = confirm("Do you want to continue ?");
+     // if( retVal == true ){
+     // document.write ("User wants to continue!");
+     // return true;
+     // }else{
+     // document.write ("Nishu User does not want to continue!");
+     // return false;
+     // }
+}
+
+function getValue(){
+     var retVal = prompt("Enter your name : ", "your name here");
+     document.write("You have entered : " + retVal);
+     }
+     
