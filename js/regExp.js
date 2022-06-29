@@ -11,6 +11,9 @@ document.write ("***************************************************************
 document.write("<u> Find any character between the brackets </u><br>");
 // ----------------------------------------------------------------------
 
+
+document.write(txtV + "　　<b class='text-danger'> /[na+c]/g</b> "+" 　　　 =　"+txtV.match(/[ni+c]/g)+"<br>");
+
      let characterPtn1 = /[abc]/;
      let characterPtn2 = /[abc]/g;
 
@@ -107,7 +110,8 @@ document.write("<b class='bg-warning text-dark'>　.　=　Find a single charact
 
 
 document.write(txtV + "　　<b class='text-danger'> /./</b> "+"　　=　"+txtV.match(/./)+"<br>");
-document.write(txtV + "　　<b class='text-danger'> /./g</b> "+"　 =　"+txtV.match(/./g)+"<br><br>");
+document.write(txtV + "　　<b class='text-danger'> /./g</b> "+"　 =　"+txtV.match(/./g)+"<br>");
+document.write(txtV + "　　<b class='text-danger'> /.+/g</b> "+"　 =　"+txtV.match(/.+/g)+"<br><br>");
 
 
 

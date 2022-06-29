@@ -211,7 +211,7 @@ function civilStatusInputElements(){
                y++;  
                console.log("sachi"); 
           }
-          else if(civS_inputElements[i].unchecked){
+          else if(civS_inputElements[y].unchecked){
                // civS_checkedItems[i] = "";  
                console.log("nishu"); 
           }
