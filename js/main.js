@@ -203,17 +203,13 @@ function genderInputElements(){
 }
 function civilStatusInputElements(){
      
+     civS_checkedItems = [];
      var y = 0;
 
      for (var i = 0; i < civS_inputElements.length; i++) {
           if (civS_inputElements[i].checked) {
                civS_checkedItems[y] = display_civilstatus[i];
                y++;  
-               console.log("sachi"); 
-          }
-          else if(civS_inputElements[y].unchecked){
-               // civS_checkedItems[i] = "";  
-               console.log("nishu"); 
           }
      }
      //  Return to display the selected CheckBox values.
@@ -247,6 +243,7 @@ function educationalInputElements(){
 }
 function assetsInputElements(){
 
+     assets_checkedItems = [];
      var y = 0;
 
      for(var i=0; i<assets_inputElements.length; i++){
