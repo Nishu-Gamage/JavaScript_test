@@ -11,6 +11,10 @@
 /*---------------------------
       Login form start 
 ---------------------------*/
+.loginStart{
+      background-image: url('../img/loginback.jpg');
+}
+
 .loginform {
      background:rgba(0,0,0,0.5);
      height: 100%;
